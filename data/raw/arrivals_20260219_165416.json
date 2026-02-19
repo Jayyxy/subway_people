@@ -1,0 +1,275 @@
+{
+  "collected_at": "2026-02-19T16:54:16.040208",
+  "arrivals": [
+    {
+      "station_name": "서울",
+      "train_line": "광운대행 - 시청방면",
+      "arrival_message": "서울 출발",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "서울",
+      "train_line": "문산행 - 신촌(경의중앙선)방면",
+      "arrival_message": "서울 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "서울",
+      "train_line": "인천공항2터미널행 - 공덕방면",
+      "arrival_message": "서울 출발",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "서울",
+      "train_line": "인천공항2터미널행 - 공덕방면 (급행)",
+      "arrival_message": "서울 출발",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "서울",
+      "train_line": "불암산행 - 회현방면",
+      "arrival_message": "전역 도착",
+      "arrival_time_sec": "120"
+    },
+    {
+      "station_name": "서울",
+      "train_line": "청량리행 - 시청방면",
+      "arrival_message": "[9]번째 전역 (가산디지털단지)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "서울",
+      "train_line": "의정부행 - 시청방면",
+      "arrival_message": "전역 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "서울",
+      "train_line": "문산행 - 신촌(경의중앙선)방면",
+      "arrival_message": "[3]번째 전역 (공덕)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "서울",
+      "train_line": "진접행 - 회현방면",
+      "arrival_message": "8분 후 (이촌)",
+      "arrival_time_sec": "480"
+    },
+    {
+      "station_name": "서울",
+      "train_line": "청량리행 - 시청방면",
+      "arrival_message": "[20]번째 전역 (성균관대)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "강남",
+      "train_line": "신사행 - 신논현방면",
+      "arrival_message": "강남 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "강남",
+      "train_line": "성수행 - 역삼방면",
+      "arrival_message": "2분 30초 후",
+      "arrival_time_sec": "150"
+    },
+    {
+      "station_name": "강남",
+      "train_line": "성수행 - 역삼방면",
+      "arrival_message": "4분 30초 후",
+      "arrival_time_sec": "270"
+    },
+    {
+      "station_name": "강남",
+      "train_line": "신사행 - 신논현방면",
+      "arrival_message": "[4]번째 전역 (판교)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "강남",
+      "train_line": "광교행 - 양재방면",
+      "arrival_message": "[3]번째 전역 (신사)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "강남",
+      "train_line": "성수행 - 교대방면",
+      "arrival_message": "3분 50초 후",
+      "arrival_time_sec": "230"
+    },
+    {
+      "station_name": "강남",
+      "train_line": "성수행 - 교대방면",
+      "arrival_message": "8분 20초 후",
+      "arrival_time_sec": "500"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "인천공항2터미널행 - 디지털미디어시티방면",
+      "arrival_message": "홍대입구 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "인천공항2터미널행 - 디지털미디어시티방면 (급행)",
+      "arrival_message": "전역 출발",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "문산행 - 가좌방면",
+      "arrival_message": "[2]번째 전역 (공덕)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "성수행 - 합정방면",
+      "arrival_message": "4분 후",
+      "arrival_time_sec": "240"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "인천공항2터미널행 - 디지털미디어시티방면",
+      "arrival_message": "[2]번째 전역 (서울)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "성수행 - 합정방면",
+      "arrival_message": "5분 40초 후",
+      "arrival_time_sec": "340"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "문산행 - 가좌방면",
+      "arrival_message": "[5]번째 전역 (이촌)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "서울행 - 공덕방면",
+      "arrival_message": "홍대입구 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "성수행 - 신촌방면",
+      "arrival_message": "전역 출발",
+      "arrival_time_sec": "80"
+    },
+    {
+      "station_name": "홍대입구",
+      "train_line": "용문행 - 서강대방면",
+      "arrival_message": "[6]번째 전역 (한국항공대)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "용산행 - 영등포방면",
+      "arrival_message": "신도림 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "광운대행 - 영등포방면",
+      "arrival_message": "전역 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "성수행 - 대림방면",
+      "arrival_message": "4분 20초 후",
+      "arrival_time_sec": "260"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "동묘앞행 - 영등포방면",
+      "arrival_message": "신도림 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "성수행 - 대림방면",
+      "arrival_message": "7분 후",
+      "arrival_time_sec": "420"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "용산행 - 영등포방면",
+      "arrival_message": "[11]번째 전역 (동암)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "동인천행 - 구로방면",
+      "arrival_message": "신도림 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "성수행 - 문래방면",
+      "arrival_message": "전역 출발",
+      "arrival_time_sec": "140"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "인천행 - 구로방면",
+      "arrival_message": "전역 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "신도림",
+      "train_line": "인천행 - 구로방면",
+      "arrival_message": "[2]번째 전역 (신길)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "잠실",
+      "train_line": "별내행 - 몽촌토성(평화의문)방면",
+      "arrival_message": "잠실 도착",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "잠실",
+      "train_line": "성수행 - 잠실나루방면",
+      "arrival_message": "전역 도착",
+      "arrival_time_sec": "90"
+    },
+    {
+      "station_name": "잠실",
+      "train_line": "성수행 - 잠실나루방면",
+      "arrival_message": "3분 10초 후",
+      "arrival_time_sec": "190"
+    },
+    {
+      "station_name": "잠실",
+      "train_line": "별내행 - 몽촌토성(평화의문)방면",
+      "arrival_message": "[3]번째 전역 (가락시장)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "잠실",
+      "train_line": "성수행 - 잠실새내방면",
+      "arrival_message": "전역 도착",
+      "arrival_time_sec": "90"
+    },
+    {
+      "station_name": "잠실",
+      "train_line": "모란행 - 석촌방면",
+      "arrival_message": "[2]번째 전역 (강동구청)",
+      "arrival_time_sec": "0"
+    },
+    {
+      "station_name": "잠실",
+      "train_line": "성수행 - 잠실새내방면",
+      "arrival_message": "3분 30초 후",
+      "arrival_time_sec": "210"
+    },
+    {
+      "station_name": "잠실",
+      "train_line": "모란행 - 석촌방면",
+      "arrival_message": "[5]번째 전역 (암사역사공원)",
+      "arrival_time_sec": "0"
+    }
+  ]
+}

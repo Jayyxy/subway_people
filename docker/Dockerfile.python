@@ -1,0 +1,35 @@
+# Python 3.11 slim 이미지 사용
+FROM python:3.11-slim
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+# --------------------------------------------------------
+# [NEW] 1. Java 설치 (Spark 구동을 위해 필수!)
+# --------------------------------------------------------
+RUN apt-get update && \
+    apt-get install -y default-jdk procps && \
+    apt-get clean
+
+# [NEW] 2. JAVA_HOME 환경변수 설정
+ENV JAVA_HOME=/usr/lib/jvm/default-java
+
+# --------------------------------------------------------
+# 3. 라이브러리 설치
+# (pyspark를 여기서 직접 설치하거나, requirements.txt에 추가해야 함)
+# --------------------------------------------------------
+# 우선 기본 의존성 설치 (캐싱 활용)
+RUN pip install --no-cache-dir requests python-dotenv kafka-python pandas pyspark
+
+# requirements.txt가 있다면 복사 및 추가 설치
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 소스 코드 복사 (src/ 내용을 /app/에 복사)
+COPY src/ .
+
+# 환경 변수 설정
+ENV PYTHONUNBUFFERED=1
+
+# 기본 명령어 (docker-compose에서 command로 덮어쓰기 때문에 기본값으로 둠)
+CMD ["python", "collector.py"]

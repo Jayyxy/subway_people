@@ -1,0 +1,105 @@
+services:
+  # 1. Zookeeper
+  zookeeper:
+    image: wurstmeister/zookeeper:latest
+    platform: linux/amd64 # [추가] M1/M2 맥북 호환성 해결
+    ports:
+      - "2181:2181"
+    networks:
+      - metro-network
+
+  # 2. Kafka
+  kafka:
+    image: wurstmeister/kafka:latest
+    platform: linux/amd64 # [추가] M1/M2 맥북 호환성 해결
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_CREATE_TOPICS: "metro-arrivals:1:1"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - zookeeper
+    networks:
+      - metro-network
+
+  # 1. 실시간 데이터 수집기
+  collector:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.python
+    volumes:
+      - ../data:/data
+      - ../src:/app
+    env_file:
+      - ../.env
+    environment:
+      - DATA_DIR=/data # 명시적으로 지정하면 더 안전합니다
+    working_dir: /app
+    command: python collector.py
+    networks:
+      - metro-network
+
+  # 2. 데이터 분석기
+  analyzer:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.python
+    volumes:
+      - ../data:/data:ro
+      - ../output:/output
+      - ../src:/app
+    env_file:
+      - ../.env
+    working_dir: /app
+    command: python analyzer.py
+    depends_on:
+      - collector
+    networks:
+      - metro-network
+
+  # 3. 디버깅용 쉘
+  shell:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.python
+    volumes:
+      - ../data:/data
+      - ../output:/output
+      - ../src:/app
+    env_file:
+      - ../.env
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    networks:
+      - metro-network
+
+  # 4. [NEW] 통계 데이터 수집기 (Batch Job)
+  stats-collector:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.python
+    image: metro-python-app # 이미지를 고정하면 빌드 캐시 활용에 좋습니다
+    volumes:
+      - ../src:/app # 코드를 수정하면 바로 반영
+      - ../data:/data # 수집된 데이터를 호스트와 공유
+    env_file:
+      - ../.env # API 키 로드
+    environment:
+      DATA_DIR: /data # 컨테이너 내부 경로 기준
+    working_dir: /app
+    command: python stats_collector.py
+    networks:
+      - metro-network
+
+# ============================================
+# 네트워크 정의 (가장 하단에 추가)
+# ============================================
+networks:
+  metro-network:
+    driver: bridge
